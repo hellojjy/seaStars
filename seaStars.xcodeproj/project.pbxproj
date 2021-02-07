@@ -16,6 +16,11 @@
 		843390D625C3A53D0078B3B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 843390D525C3A53D0078B3B4 /* main.m */; };
 		843390E025C3A53D0078B3B4 /* seaStarsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 843390DF25C3A53D0078B3B4 /* seaStarsTests.m */; };
 		843390EB25C3A53D0078B3B4 /* seaStarsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 843390EA25C3A53D0078B3B4 /* seaStarsUITests.m */; };
+		84FFE34725CD2F0B0044B3A3 /* GLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FFE34625CD2F0B0044B3A3 /* GLView.m */; };
+		84FFE34F25CD2F450044B3A3 /* vertexShader.sh in Resources */ = {isa = PBXBuildFile; fileRef = 84FFE34E25CD2F450044B3A3 /* vertexShader.sh */; };
+		84FFE35425CD2F730044B3A3 /* frameShader.sh in Resources */ = {isa = PBXBuildFile; fileRef = 84FFE35325CD2F730044B3A3 /* frameShader.sh */; };
+		84FFE36425CD2FA50044B3A3 /* GLESUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FFE35D25CD2FA50044B3A3 /* GLESUtils.m */; };
+		84FFE36525CD2FA50044B3A3 /* GLESMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 84FFE35F25CD2FA50044B3A3 /* GLESMath.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,16 @@
 		843390E625C3A53D0078B3B4 /* seaStarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = seaStarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		843390EA25C3A53D0078B3B4 /* seaStarsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = seaStarsUITests.m; sourceTree = "<group>"; };
 		843390EC25C3A53D0078B3B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84FFE34525CD2F0B0044B3A3 /* GLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLView.h; sourceTree = "<group>"; };
+		84FFE34625CD2F0B0044B3A3 /* GLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLView.m; sourceTree = "<group>"; };
+		84FFE34E25CD2F450044B3A3 /* vertexShader.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = vertexShader.sh; sourceTree = "<group>"; };
+		84FFE35325CD2F730044B3A3 /* frameShader.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = frameShader.sh; sourceTree = "<group>"; };
+		84FFE35D25CD2FA50044B3A3 /* GLESUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLESUtils.m; sourceTree = "<group>"; };
+		84FFE35E25CD2FA50044B3A3 /* Quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quaternion.h; sourceTree = "<group>"; };
+		84FFE35F25CD2FA50044B3A3 /* GLESMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GLESMath.c; sourceTree = "<group>"; };
+		84FFE36025CD2FA50044B3A3 /* GLESUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESUtils.h; sourceTree = "<group>"; };
+		84FFE36125CD2FA50044B3A3 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		84FFE36225CD2FA50044B3A3 /* GLESMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESMath.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +119,8 @@
 		843390C225C3A53A0078B3B4 /* seaStars */ = {
 			isa = PBXGroup;
 			children = (
+				84FFE35825CD2FA50044B3A3 /* Utils */,
+				84FFE34425CD2ED00044B3A3 /* GLView */,
 				843390C325C3A53A0078B3B4 /* AppDelegate.h */,
 				843390C425C3A53A0078B3B4 /* AppDelegate.m */,
 				843390C625C3A53A0078B3B4 /* SceneDelegate.h */,
@@ -135,6 +152,38 @@
 				843390EC25C3A53D0078B3B4 /* Info.plist */,
 			);
 			path = seaStarsUITests;
+			sourceTree = "<group>";
+		};
+		84FFE34425CD2ED00044B3A3 /* GLView */ = {
+			isa = PBXGroup;
+			children = (
+				84FFE34525CD2F0B0044B3A3 /* GLView.h */,
+				84FFE34625CD2F0B0044B3A3 /* GLView.m */,
+				84FFE34E25CD2F450044B3A3 /* vertexShader.sh */,
+				84FFE35325CD2F730044B3A3 /* frameShader.sh */,
+			);
+			path = GLView;
+			sourceTree = "<group>";
+		};
+		84FFE35825CD2FA50044B3A3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				84FFE35C25CD2FA50044B3A3 /* Matrix */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		84FFE35C25CD2FA50044B3A3 /* Matrix */ = {
+			isa = PBXGroup;
+			children = (
+				84FFE36225CD2FA50044B3A3 /* GLESMath.h */,
+				84FFE35F25CD2FA50044B3A3 /* GLESMath.c */,
+				84FFE36025CD2FA50044B3A3 /* GLESUtils.h */,
+				84FFE35D25CD2FA50044B3A3 /* GLESUtils.m */,
+				84FFE35E25CD2FA50044B3A3 /* Quaternion.h */,
+				84FFE36125CD2FA50044B3A3 /* Vector.h */,
+			);
+			path = Matrix;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +289,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				843390D325C3A53D0078B3B4 /* LaunchScreen.storyboard in Resources */,
+				84FFE35425CD2F730044B3A3 /* frameShader.sh in Resources */,
+				84FFE34F25CD2F450044B3A3 /* vertexShader.sh in Resources */,
 				843390D025C3A53D0078B3B4 /* Assets.xcassets in Resources */,
 				843390CE25C3A53A0078B3B4 /* Main.storyboard in Resources */,
 			);
@@ -266,10 +317,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FFE36525CD2FA50044B3A3 /* GLESMath.c in Sources */,
 				843390CB25C3A53A0078B3B4 /* ViewController.m in Sources */,
+				84FFE36425CD2FA50044B3A3 /* GLESUtils.m in Sources */,
 				843390C525C3A53A0078B3B4 /* AppDelegate.m in Sources */,
 				843390D625C3A53D0078B3B4 /* main.m in Sources */,
 				843390C825C3A53A0078B3B4 /* SceneDelegate.m in Sources */,
+				84FFE34725CD2F0B0044B3A3 /* GLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
